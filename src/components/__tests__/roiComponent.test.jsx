@@ -21,7 +21,7 @@ test('renders correct initial values', () => {
   expect(wrapper.find('#initial-investment-value').text()).toEqual('$2,400');
   expect(wrapper.find('#monthly-investment-value').text()).toEqual('$0');
   expect(wrapper.find('#years').text()).toEqual('5');
-  expect(wrapper.find('#ownership-value').text()).toEqual('$3,600');
+  expect(wrapper.find('#ownership-value').text()).toEqual('$74,400');
 });
 
 test('renders correct values when initial investment slider is changed', () => {
@@ -29,7 +29,7 @@ test('renders correct values when initial investment slider is changed', () => {
   const slider = wrapper.find('#ii-slider');
   slider.props().onChange({}, 3500);
   expect(wrapper.find('#initial-investment-value').text()).toEqual('$3,500');
-  expect(wrapper.find('#ownership-value').text()).toEqual('$4,700');
+  expect(wrapper.find('#ownership-value').text()).toEqual('$75,500');
 });
 
 test('renders correct values when monthly investment slider is changed', () => {
@@ -37,7 +37,7 @@ test('renders correct values when monthly investment slider is changed', () => {
   const slider = wrapper.find('#mi-slider');
   slider.props().onChange({}, 300);
   expect(wrapper.find('#monthly-investment-value').text()).toEqual('$300');
-  expect(wrapper.find('#ownership-value').text()).toEqual('$21,600');
+  expect(wrapper.find('#ownership-value').text()).toEqual('$92,400');
 });
 
 test('renders correct values when year length slider is changed', () => {
@@ -45,7 +45,7 @@ test('renders correct values when year length slider is changed', () => {
   const slider = wrapper.find('#year-slider');
   slider.props().onChange({}, 8);
   expect(wrapper.find('#years').text()).toEqual('8');
-  expect(wrapper.find('#ownership-value').text()).toEqual('$3,600');
+  expect(wrapper.find('#ownership-value').text()).toEqual('$117,600');
 });
 
 test('renders correct values when all slider values are changed', () => {
@@ -59,5 +59,5 @@ test('renders correct values when all slider values are changed', () => {
   expect(wrapper.find('#initial-investment-value').text()).toEqual('$4,450');
   expect(wrapper.find('#monthly-investment-value').text()).toEqual('$380');
   expect(wrapper.find('#years').text()).toEqual('2');
-  expect(wrapper.find('#ownership-value').text()).toEqual('$14,770');
+  expect(wrapper.find('#ownership-value').text()).toEqual('$42,370');
 });
