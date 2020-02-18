@@ -1,0 +1,33 @@
+{
+  "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/extensions": ["off"],
+    "import/first": ["warn"],
+    "import/no-unresolved": ["warn"],
+    "max-len": ["off"],
+    "no-bitwise": ["off"],
+    "no-plusplus": ["off"],
+    "no-confusing-arrow": ["off"],
+    "no-console": ["warn"],
+    "no-param-reassign": ["off"],
+    "no-shadow": ["off"],
+    "no-use-before-define": ["warn"],
+    "radix": ["off"]
+  },
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  },
+  "globals": {}
+}
